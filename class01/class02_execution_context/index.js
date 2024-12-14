@@ -37,9 +37,10 @@ function greet1()
 
 
 /** Let --> let & const variables although they are hoisted (In browesr under Script scope we can see these, but not available for use), you cant access them before initialization--->Temporal dead zone */
-console.log(num)
+//console.log(num)
 printName()
 let num= 4
+console.log(num)
 function printName()
 {
     console.log("My name is Mr.X")
