@@ -47,6 +47,6 @@ function printName()
 }
 let printAge = function()
 {
-    console.log("my age is 255")
+    console.log("my age is 25")
 }
 printAge()

@@ -110,7 +110,7 @@ grandMa()
 
 function grandMa()
 {
-    const secret = "Maggi Masala"
+    const secret = "Maggi Masala is very tasty"
     function bitti()
     {
         console.log("i know the secret", secret) //closure over parent 
@@ -124,7 +124,7 @@ const recipe = grandMa()
 
 function grandMa()
 {
-    const secret = "Maggi Masala"
+    const secret = "Maggi Masala is good"
     const unusedVal = 123
     function bitti()
     {
