@@ -118,3 +118,31 @@ acc=acc+currentValue
 return acc
 },0)
 console.log(totalSum)
+
+// Function that takes a callback
+function performOperation(a, b, callback) {
+    return callback(a, b);
+}
+
+// Callback functions
+const sum = (a, b) => a + b;
+const multiply = (a, b) => a * b;
+
+// Using the callback functions
+console.log("Sum:", performOperation(5, 3, sum));
+console.log("Multiply:", performOperation(5, 3, multiply));
+
+// function sum(a, b) {
+//     return a + b;
+// }
+
+// const performOperation = (a, b, callback) => callback(a, b);
+
+/*const performOperation = (a, b, callback) => {
+    console.log(`Performing operation on ${a} and ${b}`);
+    const result = callback(a, b);
+    console.log(`Result: ${result}`);
+    return result;
+};*/
+
+/**if arrow functions has many lines-> curly braces{}, return the value also */
