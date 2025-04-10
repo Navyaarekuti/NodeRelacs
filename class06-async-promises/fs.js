@@ -90,3 +90,6 @@ promiseReadfile3.then(readFileCallback).catch(handleError)
 //                 console.log("this is error"+err.message)
 //             })
 
+//https://www.freecodecamp.org/news/guide-to-javascript-promises/
+Hello
+
