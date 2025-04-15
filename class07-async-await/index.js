@@ -71,3 +71,26 @@ async function handlePromise2()
     console.log(value2);
     }
 handlePromise2()
+
+function sample1()
+{
+    console.log("sample test1")
+}
+const sample2 = new Promise(function(resolve,result)
+{setTimeout(function()
+{
+    resolve("sampletest2")
+},4000)
+})
+async function getData()
+{
+    const data = await sample2
+    console.log(data)
+}
+function sample3()
+{
+    console.log("sample test3")
+}
+sample1()
+getData()
+sample3()
