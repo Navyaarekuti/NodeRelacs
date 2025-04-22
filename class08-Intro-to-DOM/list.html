@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+        <li>Item 5</li>
+        <li>Item 6</li>
+        <li>Item 8</li>
+        <li>Item 9</li>
+        <li>Item 10</li>
+    </ul>
+    <script>
+        /**
+         * Approach -
+         * Select - the ul element
+         * create the new li element
+         * insert the new li in correct position
+         **/
+        const allItems = document.querySelectorAll("li")
+        console.log(allItems)
+        const indexThatHas8 = allItems[6];
+        const seventhElem = document.createElement('li')
+        seventhElem.innerText = "Item 7"
+        //get the ul
+        const ulNode = document.querySelector('ul')
+        ulNode.insertBefore(seventhElem,indexThatHas8);
+        //parentNode.inserrtBefore(newNode,ReferenceNode)
+    </script>
+</body>
+</html>

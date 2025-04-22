@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id = "myDiv" class= "content visible">Hello World !</div>
+    <script>
+        const divEle = document.getElementById('myDiv')
+        //add a new class
+        divEle.classList.add('highlight');
+        //remove a class
+        divEle.classList.remove('visible');
+        //check if class is present in given element
+        if(divEle.classList.contains('content'))
+    {
+        console.log("content is present")
+    }
+    </script>
+</body>
+</html>
