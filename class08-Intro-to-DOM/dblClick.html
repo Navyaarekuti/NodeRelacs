@@ -80,7 +80,7 @@
         cardsNodeList[i].addEventListener('dblclick',function(e)
         {
             console.log(e);
-            console.log(e.target);
+            console.log(e.target); //the card that was clicked
             const card = e.target;
             //get the attribute
             const classToBeAttached = card.getAttribute('data-color');
