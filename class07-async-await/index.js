@@ -166,7 +166,7 @@ function generateBill(processBillOrder)
 
 async function handleOrder() {
     try {
-      const orderStatus = await placeOrder("coffee1");
+      const orderStatus = await placeOrder("coffee");
       console.log("1:",orderStatus);
   
       const processStatus = await processOrder(orderStatus);
