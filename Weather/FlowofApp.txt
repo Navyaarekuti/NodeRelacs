@@ -1,0 +1,16 @@
+Yes, without console.log, the function getTemp("Chicago") will still return a Promise because the function itself is asynchronous and contains an await statement.
+
+Here's how it works:
+The function getTemp() is asynchronous because it's declared with async. This means that it always returns a Promise, regardless of whether you log anything or not.
+
+The await keyword is used to pause execution until the asynchronous operation (in this case, fetch) resolves. After fetch completes, it returns a Response object which is then parsed into JSON, and that parsed data is returned from the function.
+
+The returned Promise from getTemp("Chicago") will resolve with the parsed weather data when the API request is completed.
+
+However, without console.log in your code:
+
+You won't see the data logged to the console, but the promise will still be there, and you can consume it later using .then() or await.
+
+The function will always return a Promise because it is async.
+
+Without console.log, the Promise is still returned, but you won’t see the output directly in the console unless you explicitly consume it using .then() or await.
