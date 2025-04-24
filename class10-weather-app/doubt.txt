@@ -1,0 +1,49 @@
+✅ .value works with these form elements (and some others):
+
+Element	What .value returns
+<input>	Text entered by the user
+<textarea>	Text inside the textarea
+<select>	Currently selected option’s value
+<button>	The button’s value attribute (if set)
+<option>	The value of the option (inside <select>)
+<progress>	Current value of the progress bar
+<meter>	The current value of the meter
+❌ .value does not work on:
+<div>
+
+<span>
+
+<p>
+
+<img>
+
+<section>, <article>, <header>, etc.
+
+Basically any non-form element
+
+Why?
+Because .value is meant for form controls where the user can interact and input data.
+
+Example:
+html
+Copy
+Edit
+<input type="text" value="hello" />
+<div>Hello world</div>
+JavaScript:
+
+js
+Copy
+Edit
+const input = document.querySelector("input");
+const div = document.querySelector("div");
+
+console.log(input.value); // ✅ "hello"
+console.log(div.value);   // ❌ undefined (divs don’t have .value)
+🔥 Bonus:
+To get the content inside a <div> (or similar), use .textContent or .innerText:
+
+js
+Copy
+Edit
+console.log(div.textContent); // "Hello world"

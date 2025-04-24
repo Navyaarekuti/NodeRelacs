@@ -1,0 +1,65 @@
+1. The event listener is waiting for user interaction — in this case, a form submission.
+
+When the form is submitted:
+The callback function search() is triggered. This function runs when the user submits the form.
+
+function search(event) {
+  event.preventDefault(); // stops the page from refreshing
+  target = searchField.value; // gets user input
+  fetchData(target); // fetches weather for the city
+}
+
+2. Inside search():
+
+event.preventDefault() is called to stop the form from causing a page refresh (this is the default behavior of form submission).
+
+The value from the searchField (the input field) is then assigned to the target variable.
+
+fetchData(target) is called to start fetching weather data for the city entered by the user.
+
+**Why is fetchData() not immediately called at the start?**
+
+fetchData() is not called immediately when the page loads. Instead, it’s triggered only when the user submits the form. This is because:
+
+The event listener waits for the submit event on the form.
+
+Once the submit event happens (when the user clicks the submit button or presses "Enter"), the search() callback is triggered, which then calls fetchData(target).
+
+**What happens at the end of the code?
+At the end of the script, the line:
+fetchData(target);**
+
+is only executed once when the script initially loads. But it will use the initial value of target, which is "Guntur". This is a one-time call to fetch data for Guntur when the page loads (not when the form is submitted).
+
+So the sequence of events looks like this:
+Page loads: fetchData(target) is called with "Guntur" — the initial call to fetch weather.
+
+User interacts: After the page loads, the user types a city name into the input field.
+
+User submits the form: This triggers the submit event.
+
+The event listener callback (search()) is executed:
+
+The default form behavior is prevented (event.preventDefault()).
+
+The value from the search field is fetched and stored in target.
+
+fetchData(target) is called again with the new city name.
+
+Summary of what happens when the form is submitted:
+First: The form submission event triggers the search() callback.
+
+Then: Inside search(), the value from the input field is passed to fetchData().
+
+Finally: fetchData() runs, fetches data from the API, and updates the DOM with the new weather information.
+
+/* Flow Summary:
+HTML parsing → JavaScript execution
+
+DOM elements selected
+
+Event listener attached to form
+
+fetchData() called
+
+Wait for API response → update DOM */
