@@ -1,0 +1,47 @@
+🔁 FLOW EXPLAINED STEP BY STEP:
+document.querySelectorAll('.star')
+
+Selects all elements with class star (i.e., 5 stars).
+
+Returns a NodeList (like an array) of those <span> elements.
+
+stars.forEach(function(star) { ... })
+
+This loops over each element in the NodeList.
+
+For each loop, the individual element is passed as the argument star.
+
+Callback Function
+
+function(star) { ... } is a callback function.
+
+It is called once for each star in the NodeList.
+
+star is just a variable name representing the current star element in the loop.
+
+Inside the Callback:
+
+Adds a click event listener to each star.
+
+When clicked:
+
+It gets the value from data-value (1 to 5).
+
+Calls updateRating(value) to fill/unfill stars based on selection.
+
+🔄 Example Walkthrough:
+Let’s say the user clicks the third star:
+
+That star has: data-value="3"
+
+In the loop, star is the third <span>
+
+value = 3
+
+updateRating(3) is called
+
+Inside updateRating, we loop again and:
+
+Fill all stars with data-value <= 3 by adding the "filled" class
+
+Remove "filled" from others
