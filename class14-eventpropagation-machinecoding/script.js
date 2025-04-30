@@ -3,16 +3,16 @@ const grandparent = document.querySelector('#grandparent');
 const parent = document.querySelector('#parent');
 const child = document.querySelector('#child');
 
-// grandparent.addEventListener('click', function(){
-//     console.log('Grandparent clicked ( Capturing )');
-// },true)
-// parent.addEventListener('click', function(){
-//     console.log('parent clicked ( Capturing )');
+grandparent.addEventListener('click', function(){
+    console.log('Grandparent clicked ( Capturing )');
+},true)
+parent.addEventListener('click', function(){
+    console.log('parent clicked ( Capturing )');
 
-// },true)
-// child.addEventListener('click', function(){
-//     console.log('child clicked ( Capturing )');
-// },true)
+},true)
+child.addEventListener('click', function(){
+    console.log('child clicked ( Capturing )');
+},true)
 
 grandparent.addEventListener('click', function(){
     console.log('Grandparent clicked');
